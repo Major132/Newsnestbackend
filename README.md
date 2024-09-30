@@ -1,4 +1,4 @@
-﻿# Ft_app_backend
+﻿# NewsNest App
 
 ## Overview
 
@@ -14,9 +14,6 @@ This backend application serves as the server-side component for our project. It
 
 ## Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/jojosony21/Ft_app_backend
    
 
 ## Installation
@@ -45,29 +42,6 @@ This backend application serves as the server-side component for our project. It
 - **Register:** `/register` - Register a new user.
 - **Login:** `/login` - Log in an existing user.
 - **Forgot Password:** `/forgot-password` - Send password reset link to user's email.
-
-### Chemical Management
-
-- **Add Chemical:** `/add-chemical` - Add a new chemical to the inventory.
-- **Use Chemical:** `/use-chemical` - Record the usage of a chemical from the inventory.
-- **Recent Chemicals:** `/recent-chemicals` - Get the list of recently used chemicals.
-
-### Reagent Management
-
-- **Add Reagent:** `/add-reagent` - Add a new reagent to the inventory.
-- **Use Reagent:** `/use-reagent` - Record the usage of a reagent from the inventory.
-- **Recent Reagents:** `/recent-reagents` - Get the list of recently used reagents.
-
-### Experiment Management
-
-- **Add Experiment:** `/add-experiment` - Add a new experiment.
-- **Recent Experiments:** `/recent-experiments` - Get the list of recently conducted experiments.
-
-### Usage History
-
-- **Chemical Usage History:** `/chemical-usage-history` - Get the usage history of chemicals.
-- **Reagent Usage History:** `/reagent-usage-history` - Get the usage history of reagents.
-- **Experiment History:** `/experiment-history` - Get the history of conducted experiments.
 
 ## Authentication
 
