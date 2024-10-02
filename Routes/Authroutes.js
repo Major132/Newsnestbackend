@@ -265,5 +265,27 @@ router.post("/change-password", async (req, res) => {
       .json({ status: "error", message: "Internal server error" });
   }
 });
+router.post("/update-user", async (req, res) => {
+  const { username, email } = req.body;
+  const token = req.headers.authorization.split(" ")[1]; // Get token from header
+  const decoded = jwt.verify(token, JWT_SECRET); // Verify the token
+
+  try {
+    const updatedUser = await User.findOneAndUpdate(
+      { username: decoded.username }, // Find user by username (or ID)
+      { username, email }, // Update username and email
+      { new: true } // Return the updated document
+    );
+
+    if (!updatedUser) {
+      return res.status(404).send({ status: "error", data: "User not found" });
+    }
+
+    res.status(200).send({ status: "ok", data: "User updated successfully" });
+  } catch (error) {
+    console.error("Error updating user:", error);
+    res.status(500).send({ status: "error", data: "Internal server error" });
+  }
+});
 
 module.exports = router;
