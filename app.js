@@ -36,6 +36,7 @@ app.post("/forgotpass", authRoutes);
 app.post("/resetpass", authRoutes);
 app.post("/userdata", authRoutes);
 app.post("/change-password", authRoutes);
+app.post("/update-user",authRoutes);
 
 app.listen(5001, () => {
   console.log("Node js server started.");
