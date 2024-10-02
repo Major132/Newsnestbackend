@@ -108,7 +108,8 @@ router.post("/login-user", async (req, res) => {
       JWT_SECRET
     ); // Use username in the token payload
 
-    res.status(200).send({ status: "ok", data: "Success", msg: token });
+    // Change this to return the token in a key called 'token'
+    res.status(200).send({ status: "ok", data: "Success", token: token });
   } catch (error) {
     console.error("Error occurred during login:", error);
     res.status(500).send({ status: "error", data: "Internal server error" });
