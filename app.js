@@ -10,7 +10,7 @@ app.use(express.json());
 //database connection
 
 const mongourl =
-  "mongodb+srv://projectmajor048:projectmajor048@cluster0.c5iy7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  "mongodb+srv://projectmajor048:projectmajor048@cluster0.vfqs2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose
   .connect(mongourl)
